@@ -65,3 +65,8 @@ function saveNotes (notes) {
 }
 
 btnEl.addEventListener("click", addNote);
+
+const footer = document.createElement("span");
+footer.textContent = "© copyright 2025 WinnerTIHub, created by WinnerTIHub";
+document.body.appendChild(footer);
+footer.classList.add("footer");

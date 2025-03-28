@@ -6,6 +6,7 @@ body {
     font-family: verdana, Georgia;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 
 .heading {
@@ -24,7 +25,8 @@ body {
     display: inline-block;
     position: absolute;
     width: 100px;
-    top: 18px;
+    top: 17px;
+    left: 20px;
 }
 
 .info-text {
@@ -39,6 +41,7 @@ body {
   gap: 40px;
   justify-content: center;
   padding: 50px;
+  overflow-y: auto;
 }
 
 .note {
@@ -82,4 +85,33 @@ body {
     transform: scale(1.03);
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
     transition: all 0.4s ease-in-out;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-size: 12px;
+    align-self: center;
+    color: green;
+    background: white;
+    width: 100%;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7)
+}
+
+#delete-all {
+    width: 150px;
+    padding: 15px 20px;
+    position: absolute;
+    top: 35px;
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    #delete-all {
+        padding: 15px 5px;
+        width: 100px;
+        right: 5px;
+    }
 }
