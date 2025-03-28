@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, white 20%, green 70%, white);
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family: verdana, Georgia;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    color: green;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 35px;
+    text-shadow:1px 2px 5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 0 7px rgba(0, 0, 0, 0.5);
+    padding-bottom: 20px;
+    width: 50%;
+    align-self: center;
+}
+
+#logo {
+    display: inline-block;
+    position: absolute;
+    width: 100px;
+    top: 18px;
+}
+
+.info-text {
+    text-align: center;
+    color: #000;
+    font-size: 18px;
+    font-weight: 200;
+}
+.app {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 40px;
+  justify-content: center;
+  padding: 50px;
+}
+
+.note {
+  padding: 17px;
+  resize: none;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  height: 200px;
+  color: #4e4949;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.7);
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.note::placeholder {
+    color: gray;
+    opacity: 0.5;
+}
+
+.note:hover, .note:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.btn {
+    height: 200px;
+    border: none;
+    border-radius: 0px;
+    font-size: 60px;
+    font-weight: 700;
+    color: #036110;
+    cursor: pointer;
+    background-color: #e9e1e1;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.5);
+}
+
+.btn:hover {
+    transform: scale(1.03);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
