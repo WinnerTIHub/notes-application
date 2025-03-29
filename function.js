@@ -70,3 +70,14 @@ const footer = document.createElement("span");
 footer.textContent = "© copyright 2025 WinnerTIHub, created by WinnerTIHub";
 document.body.appendChild(footer);
 footer.classList.add("footer");
+
+const deleteBtn = document.getElementById("delete-all");
+
+function deleteAll () {
+   const note = getNotes();
+  localStorage.removeItem("notes");
+  saveNotes(note);
+ appEl.innerHTML = "";
+}
+
+deleteBtn.addEventListener("click", deleteAll);
