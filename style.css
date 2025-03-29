@@ -5,6 +5,7 @@
 }
 body {
     margin: 0;
+    width: 100vw;
     padding: 0;
     box-sizing: border-box;
     background: linear-gradient(to bottom, white 20%, green 70%, white);
@@ -14,6 +15,18 @@ body {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+}
+
+.header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    padding-bottom: 10px;
 }
 
 .heading {
@@ -52,6 +65,7 @@ body {
     justify-content: center;
     padding: 50px;
     overflow-y: auto;
+    margin-top: 150px;
 }
 
 .note {
