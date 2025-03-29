@@ -1,7 +1,7 @@
 const appEl = document.getElementById("app");
 const btnEl = document.getElementById("btn");
 
-getNotes().forEach( (note) => {
+getNotes()?.forEach( (note) => {
    const noteElO = createNote(note.id, note.content);
    appEl.insertBefore(noteElO, btnEl);
 });
@@ -23,6 +23,12 @@ function createNote (id, content) {
    element.addEventListener("input", () => {
       updateNote(id, element.value);
    })
+
+   const deleteBtn = document.getElementById("delete-all");
+
+   deleteBtn.addEventListener("click", () => {
+      deleteAll();
+   });
 
    return element;
 }
@@ -57,7 +63,7 @@ function addNote () {
 }
 
 function getNotes () {
-   return JSON.parse(localStorage.getItem("notes") || "[]");
+   return JSON.parse(localStorage.getItem("notes")) || [];
 }
 
 function saveNotes (notes) {
@@ -71,13 +77,9 @@ footer.textContent = "© copyright 2025 WinnerTIHub, created by WinnerTIHub";
 document.body.appendChild(footer);
 footer.classList.add("footer");
 
-const deleteBtn = document.getElementById("delete-all");
-
 function deleteAll () {
-   const note = getNotes();
-  localStorage.removeItem("notes");
-  saveNotes(note);
- appEl.innerHTML = "";
+   localStorage.removeItem("notes");
+   appEl.innerHTML = "";
+   appEl.appendChild(btnEl);
 }
 
-deleteBtn.addEventListener("click", deleteAll);
